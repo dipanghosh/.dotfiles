@@ -10,7 +10,6 @@ export ZSH="$HOME/.oh-my-zsh"
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
 ZSH_THEME="spaceship"
 
- 
 # Set list of themes to pick from when loading at random
 
 # Setting this variable when ZSH_THEME=random will cause zsh to load
@@ -87,7 +86,7 @@ plugins=(
   jsontools 
 )
 source $ZSH/oh-my-zsh.sh
-
+bindkey '`' autosuggest-accept
 # User configuration
 
 # export MANPATH="/usr/local/man:$MANPATH"
@@ -115,3 +114,20 @@ source $ZSH/oh-my-zsh.sh
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+# >>> conda initialize >>>
+# !! Contents within this block are managed by 'conda init' !!
+__conda_setup="$('/appl2/miniconda/bin/conda' 'shell.bash' 'hook' 2> /dev/null)"
+if [ $? -eq 0 ]; then
+    eval "$__conda_setup"
+else
+    if [ -f "/appl2/miniconda/etc/profile.d/conda.sh" ]; then
+        . "/appl2/miniconda/etc/profile.d/conda.sh"
+    else
+        export PATH="/appl2/miniconda/bin:$PATH"
+    fi
+fi
+unset __conda_setup
+# <<< conda initialize <<<
+
+export CONDA_CHANGEPS1=false
