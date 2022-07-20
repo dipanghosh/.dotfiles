@@ -84,7 +84,7 @@ plugins=(
   extract
   git
   mosh
-  timer
+  # timer
   # zsh-autocomplete
   zsh-autosuggestions
   # zsh-syntax-highlighting
@@ -148,3 +148,5 @@ export CONDA_CHANGEPS1=false
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+
+POWERLEVEL9K_TRANSIENT_PROMPT=always
