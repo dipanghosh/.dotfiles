@@ -85,8 +85,8 @@ plugins=(
   git
   mosh
   # timer
-  # zsh-autocomplete
-  zsh-autosuggestions
+  zsh-autocomplete
+  # zsh-autosuggestions
   # zsh-syntax-highlighting
   zsh-z
   copyfile
@@ -150,3 +150,4 @@ export CONDA_CHANGEPS1=false
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
 POWERLEVEL9K_TRANSIENT_PROMPT=always
+zstyle ':autocomplete:*' min-input 2
