@@ -17,8 +17,7 @@ export ZSH="$HOME/.oh-my-zsh"
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
 ZSH_THEME="powerlevel10k/powerlevel10k"
 
-# Set list of themes to pick from when loading at random
-
+# Set list of themes to pick from when loading at
 # Setting this variable when ZSH_THEME=random will cause zsh to load
 # a theme from this variable instead of looking in $ZSH/themes/
 # If set to an empty array, this variable will have no effect.
@@ -85,15 +84,15 @@ plugins=(
   git
   mosh
   # timer
-  zsh-autocomplete
-  # zsh-autosuggestions
+  # zsh-autocomplete
+  zsh-autosuggestions
   # zsh-syntax-highlighting
   zsh-z
   copyfile
   jsontools 
 )
 source $ZSH/oh-my-zsh.sh
-bindkey '`' autosuggest-accept
+# bindkey '`' autosuggest-accept
 # User configuration
 
 # export MANPATH="/usr/local/man:$MANPATH"
@@ -129,6 +128,13 @@ fi
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
+# Enable the completion system
+autoload compinit
+
+# Initialize all completions on $fpath and ignore (-i) all insecure files and directories
+compinit -i
+
+
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
 __conda_setup="$('/appl2/miniconda/bin/conda' 'shell.bash' 'hook' 2> /dev/null)"
@@ -151,3 +157,11 @@ export CONDA_CHANGEPS1=false
 
 POWERLEVEL9K_TRANSIENT_PROMPT=always
 zstyle ':autocomplete:*' min-input 2
+bindkey $key[Up] up-line-or-history
+bindkey $key[Down] down-line-or-history
+zstyle ':autocomplete:*' fzf-completion yes
+
+
+# Define custom fzf completion
+export FZF_COMPLETION_TRIGGER='!!'
+export FZF_DEFAULT_COMMAND='ag --hidden --ignore .git -g ""'
