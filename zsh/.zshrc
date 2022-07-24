@@ -84,8 +84,8 @@ plugins=(
   git
   mosh
   # timer
-  # zsh-autocomplete
-  zsh-autosuggestions
+  zsh-autocomplete
+  # zsh-autosuggestions
   # zsh-syntax-highlighting
   zsh-z
   copyfile
@@ -129,10 +129,10 @@ fi
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
 # Enable the completion system
-autoload compinit
+# autoload compinit
 
 # Initialize all completions on $fpath and ignore (-i) all insecure files and directories
-compinit -i
+# compinit -i
 
 
 # >>> conda initialize >>>
@@ -157,9 +157,14 @@ export CONDA_CHANGEPS1=false
 
 POWERLEVEL9K_TRANSIENT_PROMPT=always
 zstyle ':autocomplete:*' min-input 2
-bindkey $key[Up] up-line-or-history
-bindkey $key[Down] down-line-or-history
-zstyle ':autocomplete:*' fzf-completion yes
+bindkey '\e[A' up-line-or-history
+bindkey '\eOA' up-line-or-history
+bindkey '\e[B' down-line-or-history
+bindkey '\eOB' down-line-or-history
+zstyle ':autocomplete:*' widget-style menu-select 
+# bindkey $key[Up] up-line-or-history
+# bindkey $key[Down] down-line-or-history
+# zstyle ':autocomplete:*' fzf-completion yes
 
 
 # Define custom fzf completion
