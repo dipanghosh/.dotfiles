@@ -170,3 +170,12 @@ zstyle ':autocomplete:*' widget-style menu-select
 # Define custom fzf completion
 export FZF_COMPLETION_TRIGGER='!!'
 export FZF_DEFAULT_COMMAND='ag --hidden --ignore .git -g ""'
+
+# Custom named Directories
+if [ "$HOST" = homeserver ]; then
+   hash -d media=/srv/dev-disk-by-uuid-84e13156-8c08-49de-8cc5-e6d714eeccde
+   hash -d backup=/srv/dev-disk-by-uuid-4cbe9510-347b-4aed-852d-631d0b9bba0d
+   hash -d ctbrec=/srv/dev-disk-by-uuid-97be852e-2ff9-4521-9a32-e96d1977119a
+   hash -d old_ctbrec=/srv/dev-disk-by-uuid-1cd6dffd-9396-46f4-9ea7-0404045e58cb
+   hash -d storage=/srv/dev-disk-by-uuid-71b139b5-6d94-4e9e-bd8f-d12b88284d18
+fi
