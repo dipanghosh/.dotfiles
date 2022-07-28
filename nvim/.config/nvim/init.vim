@@ -147,3 +147,8 @@ let g:airline_symbols.maxlinenr = '☰ '
 let g:airline_symbols.dirty='⚡'
 
 inoremap <expr> <Tab> pumvisible() ? coc#_select_confirm() : "<Tab>"
+let g:webdevicons_enable_startify = 1
+
+function! StartifyEntryFormat()
+return 'WebDevIconsGetFileTypeSymbol(absolute_path) ." ". entry_path'
+endfunction
