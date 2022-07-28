@@ -32,8 +32,8 @@
   # The list of segments shown on the left. Fill it with the most important segments.
   typeset -g POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(
     # =========================[ Line #1 ]=========================
-    customHost
     os_icon                 # os identifier
+    customHost
     dir                     # current directory
     vcs                     # git status
     # =========================[ Line #2 ]=========================
@@ -1593,8 +1593,8 @@
   }
   function prompt_customHost(){
     case $HOST in
-		homeserver) p10k segment -f green -i '⭐';;
-		uwe-workstation) p10k segment -f green -i '⭐⭐';;
+		homeserver) p10k segment -f green -i '';;
+		uwe-workstation) p10k segment -f yellow -i '';;
 	esac
   }
   function prompt_histcmd() {
