@@ -1,4 +1,4 @@
-alias ll='lsd -alF'
+alias ll='lsd -AlF'
 alias la='lsd -A'
 alias l='lsd'
 alias python=python3
