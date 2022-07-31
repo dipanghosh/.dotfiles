@@ -85,14 +85,14 @@ plugins=(
   mosh
   # timer
   zsh-autocomplete
-  # zsh-autosuggestions
+  zsh-autosuggestions
   # zsh-syntax-highlighting
   zsh-z
   copyfile
   jsontools 
 )
 source $ZSH/oh-my-zsh.sh
-# bindkey '`' autosuggest-accept
+bindkey '`' autosuggest-accept
 # User configuration
 
 # export MANPATH="/usr/local/man:$MANPATH"
