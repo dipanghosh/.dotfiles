@@ -89,8 +89,8 @@ imap ii <Esc>
 
 colorscheme jellybeans
 
-let g:NERDTreeDirArrowExpandable="+"
-let g:NERDTreeDirArrowCollapsible="~"
+" let g:NERDTreeDirArrowExpandable="+"
+" let g:NERDTreeDirArrowCollapsible="~"
 
 " --- Just Some Notes ---
 " :PlugClean :PlugInstall :UpdateRemotePlugins
@@ -152,3 +152,4 @@ let g:webdevicons_enable_startify = 1
 function! StartifyEntryFormat()
 return 'WebDevIconsGetFileTypeSymbol(absolute_path) ." ". entry_path'
 endfunction
+let g:loaded_perl_provider = 0
