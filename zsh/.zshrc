@@ -89,7 +89,8 @@ plugins=(
   # zsh-syntax-highlighting
   zsh-z
   copyfile
-  jsontools 
+  jsontools
+  zsh-syntax-highlighting
 )
 source $ZSH/oh-my-zsh.sh
 bindkey '`' autosuggest-accept
