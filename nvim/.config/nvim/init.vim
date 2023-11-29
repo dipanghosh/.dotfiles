@@ -67,21 +67,21 @@ call plug#end()
 let g:Lf_PreviewInPopup = 1
 let g:Lf_ShowHidden = 1
 
-noremap <SPACE> <               C-F>
-nnoremap <C-n> :NERDTree<CR>
+"noremap <SPACE> <               C-F>
+"nnoremap <C-n> :NERDTree<CR>
 nnoremap <C-b> :NERDTreeToggle<CR>
 nnoremap <C-l> :call CocActionAsync('jumpDefinition')<CR>
-nnoremap <C-t> :split<Bar> terminal<CR>
+"nnoremap <C-t> :split<Bar> terminal<CR>
 nnoremap <tt> :TagbarToggle<CR>
 nnoremap <C-s> :w<CR>
 " Toggle spell checking on and off with `,s`
 let mapleader = ","
-nmap <silent> <leader>s :set spell!<CR>
-nmap <F8> :TagbarToggle<CR>
+"nmap <silent> <leader>s :set spell!<CR>
+"nmap <F8> :TagbarToggle<CR>
 nmap <F3> :Files<CR>
 nmap <F12> :tabn<CR>
 nmap <F10> :tabp<CR>
-imap ii <Esc>
+"imap ii <Esc>
 " source $VIMRUNTIME/mswin.vim
 " behave mswin
 
