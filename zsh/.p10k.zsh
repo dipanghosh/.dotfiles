@@ -1593,13 +1593,14 @@
   }
   function prompt_customHost(){
     case $HOST in
-		homeserver) p10k segment -f green -i '';;
-		uwe-workstation) p10k segment -f yellow -i '';;
+		homeserver) p10k segment -f green -i '';;
+		services) p10k segment -f 208 -i ' ';;
+		headnode) p10k segment -f hotpink3 -i ' ';;
 	esac
   }
   function prompt_histcmd() {
     if [[ -n $HISTCMD ]]; then
-      p10k segment -b yellow -f green -i '' -t ${HISTCMD}
+      p10k segment -b yellow -f green -i ' ' -t ${HISTCMD}
     fi
   }  
   # User-defined prompt segments may optionally provide an instant_prompt_* function. Its job
