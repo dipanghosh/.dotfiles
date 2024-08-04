@@ -179,3 +179,25 @@ if [ "$HOST" = homeserver ]; then
    hash -d old_ctbrec=/srv/dev-disk-by-uuid-1cd6dffd-9396-46f4-9ea7-0404045e58cb
    hash -d storage=/srv/dev-disk-by-uuid-71b139b5-6d94-4e9e-bd8f-d12b88284d18
 fi
+
+  export PATH="${PATH}:/home/dipan/.cargo/bin/navi"
+
+# >>> conda initialize >>>
+# !! Contents within this block are managed by 'conda init' !!
+__conda_setup="$('/opt/miniconda/bin/conda' 'shell.bash' 'hook' 2> /dev/null)"
+if [ $? -eq 0 ]; then
+    eval "$__conda_setup"
+else
+    if [ -f "/opt/miniconda/etc/profile.d/conda.sh" ]; then
+        . "/opt/miniconda/etc/profile.d/conda.sh"
+    else
+        export PATH="/opt/miniconda/bin:$PATH"
+    fi
+fi
+unset __conda_setup
+# <<< conda initialize <<<
+
+
+
+# Created by `pipx` on 2024-01-11 20:31:14
+export PATH="$PATH:/home/dipan/.local/bin"

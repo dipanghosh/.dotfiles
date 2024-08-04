@@ -1593,8 +1593,8 @@
   }
   function prompt_customHost(){
     case $HOST in
-		homeserver) p10k segment -f green -i '';;
-		uwe-workstation) p10k segment -f yellow -i '';;
+		homeserver) p10k segment -f green -i '';;
+		service) p10k segment -f yellow -i '';;
 	esac
   }
   function prompt_histcmd() {

@@ -117,14 +117,14 @@ fi
 
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
-__conda_setup="$('/appl2/miniconda/bin/conda' 'shell.bash' 'hook' 2> /dev/null)"
+__conda_setup="$('/opt/miniconda/bin/conda' 'shell.bash' 'hook' 2> /dev/null)"
 if [ $? -eq 0 ]; then
     eval "$__conda_setup"
 else
-    if [ -f "/appl2/miniconda/etc/profile.d/conda.sh" ]; then
-        . "/appl2/miniconda/etc/profile.d/conda.sh"
+    if [ -f "/opt/miniconda/etc/profile.d/conda.sh" ]; then
+        . "/opt/miniconda/etc/profile.d/conda.sh"
     else
-        export PATH="/appl2/miniconda/bin:$PATH"
+        export PATH="/opt/miniconda/bin:$PATH"
     fi
 fi
 unset __conda_setup
@@ -134,3 +134,5 @@ export ORACLE_HOME=/home2/dipan.ghosh/installclient_basic/instantclient_21_3
 export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:$ORACLE_HOME
 
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
+
+  export PATH="${PATH}:/home/dipan/.cargo/bin/navi"
