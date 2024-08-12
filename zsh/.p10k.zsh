@@ -1593,9 +1593,9 @@
   }
   function prompt_customHost(){
     case $HOST in
-		homeserver) p10k segment -f green -i '';;
 		services) p10k segment -f 208 -i ' ';;
 		headnode) p10k segment -f hotpink3 -i ' ';;
+		dg-worker) p10k segment -f hotpink3 -i ' ';;
 	esac
   }
   function prompt_histcmd() {
